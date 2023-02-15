@@ -1,0 +1,13 @@
+.form {
+    margin: 60px auto 0;
+    max-width: 358px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 665px) {
+    .form {
+        margin-top: 40px;
+        max-width: 260px;
+        padding-bottom: 40px;
+    }
+  }

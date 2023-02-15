@@ -1,0 +1,11 @@
+.popup__save-btn_disabled {
+  border: 1px solid #000;
+  color: #000;
+  opacity: .2;
+  background: transparent;
+  cursor: default;
+}
+
+.popup__save-btn_disabled:hover {
+  opacity: .2;
+}

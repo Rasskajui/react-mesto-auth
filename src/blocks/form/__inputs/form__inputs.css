@@ -1,0 +1,9 @@
+.form__inputs {
+    margin: 50px 0 15px;
+}
+
+@media screen and (max-width: 665px) {
+    .form__inputs {
+      margin: 40px 0 20px;
+    }
+  }
