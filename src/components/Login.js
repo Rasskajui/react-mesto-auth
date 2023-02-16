@@ -12,7 +12,7 @@ function Login({handleLogin}) {
                 title="Вход"
                 buttonText="Войти"
                 name="login"
-                handleLogin={handleLogin}
+                onLogin={handleLogin}
             />
         </div>
     );

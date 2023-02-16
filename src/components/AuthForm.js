@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import * as auth from './Auth';
 
 function AuthForm(props) {
 
@@ -22,29 +21,12 @@ function AuthForm(props) {
 
     function handleRegisterSubmit(e) {
         e.preventDefault();
-        auth.register(formValue)
-        .then(() => {
-            props.setSuccessPopupOpen(true);
-        })
-        .catch(() => {
-            props.setErrorPopupOpen(true);
-        })
+        props.onRegister(formValue, navigate);
     } 
 
     function handleLoginSubmit(e) {
         e.preventDefault();
-        auth.login(formValue)
-        .then((data) => {
-            auth.getMail(data.token)
-            .then((res) => {
-                if (res) {
-                    props.handleLogin(res.data.email);
-                }
-            })
-            .then(() => {
-                navigate('/', {replace:true})
-            });
-        })
+        props.onLogin(formValue, navigate);
     } 
 
     return (
