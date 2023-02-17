@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {Link, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function AuthForm(props) {
 
@@ -7,8 +7,6 @@ function AuthForm(props) {
         email: '',
         password: ''
     });
-
-    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -21,12 +19,12 @@ function AuthForm(props) {
 
     function handleRegisterSubmit(e) {
         e.preventDefault();
-        props.onRegister(formValue, navigate);
+        props.onRegister(formValue);
     } 
 
     function handleLoginSubmit(e) {
         e.preventDefault();
-        props.onLogin(formValue, navigate);
+        props.onLogin(formValue);
     } 
 
     return (
